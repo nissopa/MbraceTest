@@ -9,9 +9,10 @@
 #import "NPNotesTableViewController.h"
 #import "NPDataBaseManager.h"
 #import "Notes.h"
+#import <MessageUI/MessageUI.h>
 
 
-@interface NPNotesTableViewController () {
+@interface NPNotesTableViewController ()<MFMailComposeViewControllerDelegate> {
     NSArray *notes;
 }
 
@@ -76,10 +77,30 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSURL *link = [NSURL URLWithString:[notes[indexPath.row] link]];
-    if ([link.scheme isEqualToString:@"mailto"]) {
-        
+    NSString *linkStr = [notes[indexPath.row] link];
+    if (linkStr) {
+        NSURL *link = [NSURL URLWithString:linkStr];
+        if ([link.scheme isEqualToString:@"mailto"]) {
+            NSString *email = [linkStr stringByReplacingOccurrencesOfString:@"mailto:" withString:@""];
+            MFMailComposeViewController *picker = [MFMailComposeViewController new];
+            picker.mailComposeDelegate = self;
+            
+            [picker setSubject:@"You have pressed on email link"];
+            [picker setToRecipients:@[email]];
+            [self presentViewController:picker
+                               animated:YES
+                             completion:nil];
+        }
+        [[UIApplication sharedApplication] openURL:link];
+    } else {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
-    [[UIApplication sharedApplication] openURL:link];
 }
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error {
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
