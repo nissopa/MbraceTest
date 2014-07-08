@@ -90,7 +90,7 @@
     }
 }
 
-
+// Update the DataBase on background
 - (void)updateDataBaseWithCompletion:(void(^)())completion {
     dispatch_queue_t queue = dispatch_queue_create("NotesUpdate", NULL);
     dispatch_async(queue, ^{
@@ -101,6 +101,8 @@
     });
 }
 
+
+// Fetch all the entities
 - (NSArray *)allNotes {
     NSArray *allNotes = nil;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Notes"];

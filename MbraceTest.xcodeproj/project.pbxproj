@@ -24,7 +24,6 @@
 		B3A5398F196C432B002090D7 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5398E196C432B002090D7 /* NSDictionary+Utilities.m */; };
 		B3A53991196C43E3002090D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A53990196C43E3002090D7 /* CoreData.framework */; };
 		B3A53994196C4494002090D7 /* NPDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53993196C4494002090D7 /* NPDataBaseManager.m */; };
-		B3A53998196C4B69002090D7 /* NPNoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53997196C4B69002090D7 /* NPNoteTableViewCell.m */; };
 		B3A5399B196C4BD5002090D7 /* NPNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5399A196C4BD5002090D7 /* NPNotesTableViewController.m */; };
 		B3A539A1196C5218002090D7 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A539A0196C5218002090D7 /* Notes.m */; };
 		B3A539A3196C577A002090D7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A539A2196C577A002090D7 /* MessageUI.framework */; };
@@ -64,8 +63,6 @@
 		B3A53990196C43E3002090D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B3A53992196C4494002090D7 /* NPDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPDataBaseManager.h; sourceTree = "<group>"; };
 		B3A53993196C4494002090D7 /* NPDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPDataBaseManager.m; sourceTree = "<group>"; };
-		B3A53996196C4B69002090D7 /* NPNoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPNoteTableViewCell.h; sourceTree = "<group>"; };
-		B3A53997196C4B69002090D7 /* NPNoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPNoteTableViewCell.m; sourceTree = "<group>"; };
 		B3A53999196C4BD5002090D7 /* NPNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPNotesTableViewController.h; sourceTree = "<group>"; };
 		B3A5399A196C4BD5002090D7 /* NPNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPNotesTableViewController.m; sourceTree = "<group>"; };
 		B3A5399F196C5218002090D7 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
@@ -134,7 +131,6 @@
 		B3A53956196C41EC002090D7 /* MbraceTest */ = {
 			isa = PBXGroup;
 			children = (
-				B3A53995196C4B3A002090D7 /* Views */,
 				B3A5398C196C430D002090D7 /* Categories */,
 				B3A5398B196C429B002090D7 /* DataBase */,
 				B3A5395F196C41EC002090D7 /* NPAppDelegate.h */,
@@ -196,15 +192,6 @@
 				B3A5398E196C432B002090D7 /* NSDictionary+Utilities.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		B3A53995196C4B3A002090D7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B3A53996196C4B69002090D7 /* NPNoteTableViewCell.h */,
-				B3A53997196C4B69002090D7 /* NPNoteTableViewCell.m */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +296,6 @@
 				B3A53961196C41EC002090D7 /* NPAppDelegate.m in Sources */,
 				B3A5395D196C41EC002090D7 /* main.m in Sources */,
 				B3A539A1196C5218002090D7 /* Notes.m in Sources */,
-				B3A53998196C4B69002090D7 /* NPNoteTableViewCell.m in Sources */,
 				B3A5399B196C4BD5002090D7 /* NPNotesTableViewController.m in Sources */,
 				B3A5398F196C432B002090D7 /* NSDictionary+Utilities.m in Sources */,
 				B3A53987196C4204002090D7 /* MbraceModel.xcdatamodeld in Sources */,

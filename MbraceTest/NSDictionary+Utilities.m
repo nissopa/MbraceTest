@@ -14,6 +14,8 @@
 @implementation NSDictionary (Utilities)
 - (void)updateNote {
     Notes *note = nil;
+    
+    // Checks if note already exist
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Notes"];
     request.predicate = [NSPredicate predicateWithFormat:@"uniqueId == %@", self[Id]];
     NSError *error = nil;
@@ -21,22 +23,26 @@
                                                            error:&error];
     if (error) {
         NSLog(@"Error while fetching Core data: %@", error.description);
+        
+    // Not exist
     } else if (!matches.count) {
         note = [NSEntityDescription insertNewObjectForEntityForName:@"Notes"
                                              inManagedObjectContext:DBMgr.managedContext];
         note.uniqueId = self[Id];
         note.text = [self[Text] isKindOfClass:[NSNull class]] ? @"" : self[Text];
         [self detectLink:note];
-        
+    // Exist
     } else if (matches.count == 1) {
         note = matches.lastObject;
         note.text = self[Text];
         [self detectLink:note];
+    // Too many for id
     } else if (matches.count > 1) {
         NSLog(@"Error while fetching too much entities for uniqueId");
     }
 }
 
+// Detect links in NSString
 - (void)detectLink:(Notes *)note {
     NSError *error = NULL;
     NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink
