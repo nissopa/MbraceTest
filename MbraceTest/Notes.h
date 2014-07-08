@@ -14,5 +14,7 @@
 
 @property (nonatomic, retain) NSNumber * uniqueId;
 @property (nonatomic, retain) NSString * text;
+@property (nonatomic, retain) NSString * link;
+@property (nonatomic, retain) NSString * email;
 
 @end

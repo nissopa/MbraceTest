@@ -14,7 +14,6 @@
 		B3A5395D196C41EC002090D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5395C196C41EC002090D7 /* main.m */; };
 		B3A53961196C41EC002090D7 /* NPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53960196C41EC002090D7 /* NPAppDelegate.m */; };
 		B3A53964196C41EC002090D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A53962196C41EC002090D7 /* Main.storyboard */; };
-		B3A53967196C41EC002090D7 /* NPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53966196C41EC002090D7 /* NPViewController.m */; };
 		B3A53969196C41EC002090D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A53968196C41EC002090D7 /* Images.xcassets */; };
 		B3A53970196C41EC002090D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A5396F196C41EC002090D7 /* XCTest.framework */; };
 		B3A53971196C41EC002090D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A53950196C41EC002090D7 /* Foundation.framework */; };
@@ -22,7 +21,13 @@
 		B3A5397A196C41EC002090D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3A53978196C41EC002090D7 /* InfoPlist.strings */; };
 		B3A5397C196C41EC002090D7 /* MbraceTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5397B196C41EC002090D7 /* MbraceTestTests.m */; };
 		B3A53987196C4204002090D7 /* MbraceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3A53985196C4204002090D7 /* MbraceModel.xcdatamodeld */; };
-		B3A5398A196C4288002090D7 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53989196C4288002090D7 /* Notes.m */; };
+		B3A5398F196C432B002090D7 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5398E196C432B002090D7 /* NSDictionary+Utilities.m */; };
+		B3A53991196C43E3002090D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A53990196C43E3002090D7 /* CoreData.framework */; };
+		B3A53994196C4494002090D7 /* NPDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53993196C4494002090D7 /* NPDataBaseManager.m */; };
+		B3A53998196C4B69002090D7 /* NPNoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53997196C4B69002090D7 /* NPNoteTableViewCell.m */; };
+		B3A5399B196C4BD5002090D7 /* NPNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5399A196C4BD5002090D7 /* NPNotesTableViewController.m */; };
+		B3A539A1196C5218002090D7 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A539A0196C5218002090D7 /* Notes.m */; };
+		B3A539A3196C577A002090D7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A539A2196C577A002090D7 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +52,6 @@
 		B3A5395F196C41EC002090D7 /* NPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPAppDelegate.h; sourceTree = "<group>"; };
 		B3A53960196C41EC002090D7 /* NPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPAppDelegate.m; sourceTree = "<group>"; };
 		B3A53963196C41EC002090D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B3A53965196C41EC002090D7 /* NPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPViewController.h; sourceTree = "<group>"; };
-		B3A53966196C41EC002090D7 /* NPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPViewController.m; sourceTree = "<group>"; };
 		B3A53968196C41EC002090D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3A5396E196C41EC002090D7 /* MbraceTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MbraceTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A5396F196C41EC002090D7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,8 +59,18 @@
 		B3A53979196C41EC002090D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3A5397B196C41EC002090D7 /* MbraceTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MbraceTestTests.m; sourceTree = "<group>"; };
 		B3A53986196C4204002090D7 /* MbraceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MbraceModel.xcdatamodel; sourceTree = "<group>"; };
-		B3A53988196C4288002090D7 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
-		B3A53989196C4288002090D7 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		B3A5398D196C432B002090D7 /* NSDictionary+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utilities.h"; sourceTree = "<group>"; };
+		B3A5398E196C432B002090D7 /* NSDictionary+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utilities.m"; sourceTree = "<group>"; };
+		B3A53990196C43E3002090D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B3A53992196C4494002090D7 /* NPDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPDataBaseManager.h; sourceTree = "<group>"; };
+		B3A53993196C4494002090D7 /* NPDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPDataBaseManager.m; sourceTree = "<group>"; };
+		B3A53996196C4B69002090D7 /* NPNoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPNoteTableViewCell.h; sourceTree = "<group>"; };
+		B3A53997196C4B69002090D7 /* NPNoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPNoteTableViewCell.m; sourceTree = "<group>"; };
+		B3A53999196C4BD5002090D7 /* NPNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPNotesTableViewController.h; sourceTree = "<group>"; };
+		B3A5399A196C4BD5002090D7 /* NPNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPNotesTableViewController.m; sourceTree = "<group>"; };
+		B3A5399F196C5218002090D7 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		B3A539A0196C5218002090D7 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		B3A539A2196C577A002090D7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A539A3196C577A002090D7 /* MessageUI.framework in Frameworks */,
+				B3A53991196C43E3002090D7 /* CoreData.framework in Frameworks */,
 				B3A53953196C41EC002090D7 /* CoreGraphics.framework in Frameworks */,
 				B3A53955196C41EC002090D7 /* UIKit.framework in Frameworks */,
 				B3A53951196C41EC002090D7 /* Foundation.framework in Frameworks */,
@@ -106,6 +121,8 @@
 		B3A5394F196C41EC002090D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3A539A2196C577A002090D7 /* MessageUI.framework */,
+				B3A53990196C43E3002090D7 /* CoreData.framework */,
 				B3A53950196C41EC002090D7 /* Foundation.framework */,
 				B3A53952196C41EC002090D7 /* CoreGraphics.framework */,
 				B3A53954196C41EC002090D7 /* UIKit.framework */,
@@ -117,14 +134,16 @@
 		B3A53956196C41EC002090D7 /* MbraceTest */ = {
 			isa = PBXGroup;
 			children = (
+				B3A53995196C4B3A002090D7 /* Views */,
+				B3A5398C196C430D002090D7 /* Categories */,
 				B3A5398B196C429B002090D7 /* DataBase */,
 				B3A5395F196C41EC002090D7 /* NPAppDelegate.h */,
 				B3A53960196C41EC002090D7 /* NPAppDelegate.m */,
 				B3A53962196C41EC002090D7 /* Main.storyboard */,
-				B3A53965196C41EC002090D7 /* NPViewController.h */,
-				B3A53966196C41EC002090D7 /* NPViewController.m */,
 				B3A53968196C41EC002090D7 /* Images.xcassets */,
 				B3A53957196C41EC002090D7 /* Supporting Files */,
+				B3A53999196C4BD5002090D7 /* NPNotesTableViewController.h */,
+				B3A5399A196C4BD5002090D7 /* NPNotesTableViewController.m */,
 			);
 			path = MbraceTest;
 			sourceTree = "<group>";
@@ -162,10 +181,30 @@
 			isa = PBXGroup;
 			children = (
 				B3A53985196C4204002090D7 /* MbraceModel.xcdatamodeld */,
-				B3A53988196C4288002090D7 /* Notes.h */,
-				B3A53989196C4288002090D7 /* Notes.m */,
+				B3A5399F196C5218002090D7 /* Notes.h */,
+				B3A539A0196C5218002090D7 /* Notes.m */,
+				B3A53992196C4494002090D7 /* NPDataBaseManager.h */,
+				B3A53993196C4494002090D7 /* NPDataBaseManager.m */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		B3A5398C196C430D002090D7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B3A5398D196C432B002090D7 /* NSDictionary+Utilities.h */,
+				B3A5398E196C432B002090D7 /* NSDictionary+Utilities.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		B3A53995196C4B3A002090D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3A53996196C4B69002090D7 /* NPNoteTableViewCell.h */,
+				B3A53997196C4B69002090D7 /* NPNoteTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,10 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A53967196C41EC002090D7 /* NPViewController.m in Sources */,
-				B3A5398A196C4288002090D7 /* Notes.m in Sources */,
+				B3A53994196C4494002090D7 /* NPDataBaseManager.m in Sources */,
 				B3A53961196C41EC002090D7 /* NPAppDelegate.m in Sources */,
 				B3A5395D196C41EC002090D7 /* main.m in Sources */,
+				B3A539A1196C5218002090D7 /* Notes.m in Sources */,
+				B3A53998196C4B69002090D7 /* NPNoteTableViewCell.m in Sources */,
+				B3A5399B196C4BD5002090D7 /* NPNotesTableViewController.m in Sources */,
+				B3A5398F196C432B002090D7 /* NSDictionary+Utilities.m in Sources */,
 				B3A53987196C4204002090D7 /* MbraceModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
