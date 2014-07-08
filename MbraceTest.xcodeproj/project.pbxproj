@@ -21,6 +21,8 @@
 		B3A53972196C41EC002090D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A53954196C41EC002090D7 /* UIKit.framework */; };
 		B3A5397A196C41EC002090D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3A53978196C41EC002090D7 /* InfoPlist.strings */; };
 		B3A5397C196C41EC002090D7 /* MbraceTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5397B196C41EC002090D7 /* MbraceTestTests.m */; };
+		B3A53987196C4204002090D7 /* MbraceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3A53985196C4204002090D7 /* MbraceModel.xcdatamodeld */; };
+		B3A5398A196C4288002090D7 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A53989196C4288002090D7 /* Notes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		B3A53977196C41EC002090D7 /* MbraceTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MbraceTestTests-Info.plist"; sourceTree = "<group>"; };
 		B3A53979196C41EC002090D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3A5397B196C41EC002090D7 /* MbraceTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MbraceTestTests.m; sourceTree = "<group>"; };
+		B3A53986196C4204002090D7 /* MbraceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MbraceModel.xcdatamodel; sourceTree = "<group>"; };
+		B3A53988196C4288002090D7 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		B3A53989196C4288002090D7 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		B3A53956196C41EC002090D7 /* MbraceTest */ = {
 			isa = PBXGroup;
 			children = (
+				B3A5398B196C429B002090D7 /* DataBase */,
 				B3A5395F196C41EC002090D7 /* NPAppDelegate.h */,
 				B3A53960196C41EC002090D7 /* NPAppDelegate.m */,
 				B3A53962196C41EC002090D7 /* Main.storyboard */,
@@ -150,6 +156,16 @@
 				B3A53978196C41EC002090D7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3A5398B196C429B002090D7 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				B3A53985196C4204002090D7 /* MbraceModel.xcdatamodeld */,
+				B3A53988196C4288002090D7 /* Notes.h */,
+				B3A53989196C4288002090D7 /* Notes.m */,
+			);
+			name = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A53967196C41EC002090D7 /* NPViewController.m in Sources */,
+				B3A5398A196C4288002090D7 /* Notes.m in Sources */,
 				B3A53961196C41EC002090D7 /* NPAppDelegate.m in Sources */,
 				B3A5395D196C41EC002090D7 /* main.m in Sources */,
+				B3A53987196C4204002090D7 /* MbraceModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +485,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3A53985196C4204002090D7 /* MbraceModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3A53986196C4204002090D7 /* MbraceModel.xcdatamodel */,
+			);
+			currentVersion = B3A53986196C4204002090D7 /* MbraceModel.xcdatamodel */;
+			path = MbraceModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B3A53945196C41EC002090D7 /* Project object */;
 }
