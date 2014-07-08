@@ -37,10 +37,16 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
     [DBMgr contextWithCompletion:^{
         [DBMgr updateDataBaseWithCompletion:^{
             notes = DBMgr.allNotes;
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(didBecomeActive)
+                                                         name:UIApplicationDidBecomeActiveNotification
+                                                       object:nil];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
@@ -48,10 +54,14 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)didBecomeActive
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [DBMgr updateDataBaseWithCompletion:^{
+        notes = DBMgr.allNotes;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
 }
 
 #pragma mark - Table view data source
@@ -102,5 +112,18 @@
                         error:(NSError *)error {
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+     if (editingStyle == UITableViewCellEditingStyleDelete) {
+         // Delete the row from the data source
+         [DBMgr deleteNote:notes[indexPath.row]];
+         notes = DBMgr.allNotes;
+         [tableView deleteRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationFade];
+     }
+ }
 
 @end

@@ -113,4 +113,8 @@
     }
     return allNotes;
 }
+
+- (void)deleteNote:(Notes *)note {
+    [_managedContext deleteObject:note];
+}
 @end
